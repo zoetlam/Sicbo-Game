@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+/* body{
+    background-image: url(../images/bg-dice.jpeg);
+    background-size: cover;
+    min-height: 1000px;
+} */
+
+/* color
+    beige: #F2E3DB
+    green: #41644A
+    dark-green: #263A29
+    orange: #E86A33
+*/
+
+/* Font
+    font-family: 'Aladin', cursive;
+    font-family: 'Amatic SC', cursive; 
+*/
+body{
+    background-color: #41644A;
+}
+#title{
+    color: #FFEE63;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 170px;
+    margin-bottom: 0;
+}
+.dice-area{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+}
+.dice-area img{
+    transform: scale(0.7);
+}
+button{
+    display: block;
+    margin: 10px auto;
+}
+p{
+    text-align: center;
+    color: #F2E3DB;
+}
+.bet{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.bet h5{
+    border: 2px solid black;
+    padding: 10px 30px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #F2E3DB;
+    color: #41644A;
+    border-radius: 10px;
+}
