@@ -11,20 +11,30 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1 id="title">SICBO</h1>
+    <h1 id="title">SIC BO</h1>
     <div class="dice-area">
-        <img src="images/dice1.png">
-        <img src="images/dice1.png">
-        <img src="images/dice1.png">
+        <img  src="images/dice1.png" class="dice" id="dice1">
+        <img src="images/dice1.png" class="dice" id="dice2">
+        <img src="images/dice1.png" class="dice" id="dice3">
     </div>
+    <p>Place your bet and roll the dice!</p>
+    <!-- display player's token count -->
+    <p>Tokens: <span id="token-count">100</span></p> 
     <div class="bet">
-        <h5>Small <br> (0 - 10)</h5>
-        <h5>Big<br> (11 - 18)</h5>
+        <p>Bet:
+            <input type="number" id="bet-amount" value="10">
+            <select id="bet-type">
+              <option value="big">Big</option>
+              <option value="small">Small</option>
+              <option value="triple">Triple</option>
+            </select>
+            <button onclick="rollDice()">Roll Dice</button>
+          </p>
     </div>
-    <button>Roll</button>
     
-    <p>Total: 3</p>
+    <p id="result"></p>
     
     <script src="js/index.js"></script>
+    <!-- <script src="js/main.js"></script> -->
 </body>
 </html>

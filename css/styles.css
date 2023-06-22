@@ -25,6 +25,7 @@ body{
     font-family: 'Amatic SC', cursive;
     font-size: 170px;
     margin-bottom: 0;
+    line-height: 1;
 }
 .dice-area{
     display: flex;
@@ -49,12 +50,4 @@ p{
     justify-content: space-evenly;
     width: 50%;
 }
-.bet h5{
-    border: 2px solid black;
-    padding: 10px 30px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #F2E3DB;
-    color: #41644A;
-    border-radius: 10px;
-}
+
