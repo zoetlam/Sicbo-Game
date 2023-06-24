@@ -24,7 +24,7 @@ body{
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-size: 170px;
-    margin-bottom: 0;
+    margin: 30px;
     line-height: 1;
 }
 .dice-area{
@@ -57,5 +57,9 @@ p{
     }
     .dice-area{
         margin: 30px auto;
+    }
+    .dice{
+        width: 30%;
+        padding: 0 5px;
     }
 }
