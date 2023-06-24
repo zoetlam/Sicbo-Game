@@ -10,8 +10,6 @@ function play(){
     let dice2 = Math.floor(Math.random() * 6) + 1;;
     let dice3 = Math.floor(Math.random() * 6) + 1;;
 
-    
-
     let imgSrc1 = imgSrc(dice1);
     let imgSrc2 = imgSrc(dice2);
     let imgSrc3 = imgSrc(dice3);
@@ -32,16 +30,16 @@ function play(){
       } else {
         if (betType === "big") {
           if (total >= 11 && total <= 17) {
-            tokenCount += betAmount * 2;
-            resultText = "You won " + (betAmount * 2) + "!";
+            tokenCount += betAmount;
+            resultText = "You won " + (betAmount) + "!";
           } else {
             tokenCount -= betAmount;
             resultText = "You lost " + betAmount + ".";
           }
         } else if (betType === "small") {
           if (total >= 4 && total <= 10) {
-            tokenCount += betAmount * 2;
-            resultText = "You won " + (betAmount * 2) + "!";
+            tokenCount += betAmount;
+            resultText = "You won " + (betAmount) + "!";
           } else {
             tokenCount -= betAmount;
             resultText = "You lost " + betAmount + ".";
@@ -60,6 +58,7 @@ function play(){
     // display the result and update the token count
     document.getElementById("result").innerHTML = resultText;
     document.getElementById("token-count").innerHTML = tokenCount;
+    document.getElementById("total").innerHTML = "Total:" + total;
       
 }
 document.querySelector('button').addEventListener('click', play);

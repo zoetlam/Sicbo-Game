@@ -13,13 +13,14 @@
 <body>
     <h1 id="title">SIC BO</h1>
     <div class="dice-area">
-        <img  src="images/dice1.png" class="dice" id="dice1">
-        <img src="images/dice1.png" class="dice" id="dice2">
-        <img src="images/dice1.png" class="dice" id="dice3">
+        <img class="dice"src="images/dice1.png" >
+        <img class="dice"src="images/dice1.png" >
+        <img class="dice"src="images/dice1.png" >
     </div>
-    <p>Place your bet and roll the dice!</p>
+    
+    <p id="total">Place your bet and roll the dice!</p>
     <!-- display player's token count -->
-    <p>Tokens: <span id="token-count">100</span></p> 
+    <p>Your Tokens: <span id="token-count">100</span></p> 
     <div class="bet">
         <p>Bet:
             <input type="number" id="bet-amount" value="10">
@@ -35,6 +36,5 @@
     <p id="result"></p>
     
     <script src="js/index.js"></script>
-    <!-- <script src="js/main.js"></script> -->
 </body>
 </html>
