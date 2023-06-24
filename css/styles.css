@@ -29,7 +29,7 @@ body{
 }
 .dice-area{
     width: 70%;
-    margin: 0 auto;
+    margin: 20px auto 30px;
     display: flex;
     justify-content: space-around;
 }
@@ -54,6 +54,8 @@ p{
 @media screen and (max-width: 767px){
     #title{
         font-size: 7rem;
-        margin-bottom: 50px;
+    }
+    .dice-area{
+        margin: 30px auto;
     }
 }
