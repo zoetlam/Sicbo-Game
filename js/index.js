@@ -1,6 +1,6 @@
 let tokenCount = 100; // initialize player's token count
 
-function play(){
+function rollDice(){
     const imgSrc = (num) => {
         let n = "images/dice"+num+".png";
         return n;
@@ -14,11 +14,6 @@ function play(){
     let imgSrc2 = imgSrc(dice2);
     let imgSrc3 = imgSrc(dice3);
 
-    // display the dice values
-    document.querySelectorAll('img')[0].setAttribute('src', imgSrc1);
-    document.querySelectorAll('img')[1].setAttribute('src', imgSrc2);
-    document.querySelectorAll('img')[2].setAttribute('src', imgSrc3);
-
     // calculate the total and determine win or loss
     let total = dice1 + dice2 + dice3;
     let betAmount = parseInt(document.getElementById("bet-amount").value);
@@ -27,7 +22,16 @@ function play(){
 
     if (betAmount > tokenCount) { // check if player can afford the bet
         resultText = "You don't have enough tokens!";
+        total = "!";
+      } else if (betAmount < 0){
+        resultText = "Sorry, bet amount cannot be a negative value";
+        total = "!";
       } else {
+        // display the dice values
+        document.querySelectorAll('img')[0].setAttribute('src', imgSrc1);
+        document.querySelectorAll('img')[1].setAttribute('src', imgSrc2);
+        document.querySelectorAll('img')[2].setAttribute('src', imgSrc3);
+        
         if (betType === "big") {
           if (total >= 11 && total <= 17) {
             tokenCount += betAmount;
@@ -61,4 +65,3 @@ function play(){
     document.getElementById("total").innerHTML = "Total:" + total;
       
 }
-document.querySelector('button').addEventListener('click', play);
