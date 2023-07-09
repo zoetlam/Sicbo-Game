@@ -18,16 +18,24 @@ function rollDice(betType){
     let total = dice1 + dice2 + dice3;
     let betAmount = parseInt(document.getElementById("bet-amount").value);
     let resultText = "";
+    function oops(){
+      document.getElementById("token-count").innerHTML = tokenCount;
+      document.getElementById("total").innerHTML = total + " " + resultText;
 
+    }
+    
     if (betAmount > tokenCount) { // check if player can afford the bet
         resultText = "You don't have enough tokens!";
         total = "OOPS!";
+        oops();
       } else if (betAmount < 0){
         resultText = "Sorry, bet amount cannot be a negative value";
         total = "OOPS!";
+        oops();
       } else if (isNaN(betAmount)){
         resultText = "Sorry, bet amount should be a Number";
         total = "OOPS!";
+        oops();
       } else {
         // display the dice values
         document.querySelectorAll('img')[0].setAttribute('src', imgSrc1);
@@ -59,10 +67,11 @@ function rollDice(betType){
             resultText = "You lost " + betAmount + ".";
           }
         }
+        document.getElementById("token-count").innerHTML = tokenCount;
+        document.getElementById("total").innerHTML = "Total:" + total + " And " + resultText;
       }
     
     // display the result and update the token count
     // document.getElementById("result").innerHTML = resultText;
-    document.getElementById("token-count").innerHTML = tokenCount;
-    document.getElementById("total").innerHTML = "Total:" + total + " And " + resultText;  
+      
 }
