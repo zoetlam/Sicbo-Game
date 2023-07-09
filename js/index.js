@@ -1,6 +1,6 @@
 let tokenCount = 100; // initialize player's token count
 
-function rollDice(){
+function rollDice(betType){
     const imgSrc = (num) => {
         let n = "images/dice"+num+".png";
         return n;
@@ -17,15 +17,17 @@ function rollDice(){
     // calculate the total and determine win or loss
     let total = dice1 + dice2 + dice3;
     let betAmount = parseInt(document.getElementById("bet-amount").value);
-    let betType = document.getElementById("bet-type").value;
     let resultText = "";
 
     if (betAmount > tokenCount) { // check if player can afford the bet
         resultText = "You don't have enough tokens!";
-        total = "!";
+        total = "OOPS!";
       } else if (betAmount < 0){
         resultText = "Sorry, bet amount cannot be a negative value";
-        total = "!";
+        total = "OOPS!";
+      } else if (isNaN(betAmount)){
+        resultText = "Sorry, bet amount should be a Number";
+        total = "OOPS!";
       } else {
         // display the dice values
         document.querySelectorAll('img')[0].setAttribute('src', imgSrc1);
@@ -60,8 +62,7 @@ function rollDice(){
       }
     
     // display the result and update the token count
-    document.getElementById("result").innerHTML = resultText;
+    // document.getElementById("result").innerHTML = resultText;
     document.getElementById("token-count").innerHTML = tokenCount;
-    document.getElementById("total").innerHTML = "Total:" + total;
-      
+    document.getElementById("total").innerHTML = "Total:" + total + " And " + resultText;  
 }

@@ -17,23 +17,22 @@
         <img class="dice"src="images/dice1.png" >
         <img class="dice"src="images/dice1.png" >
     </div>
-    
-    <p id="total">Place your bet and roll the dice!</p>
+   
+    <p id="total">Place your bet and roll the dice! </p> 
     <!-- display player's token count -->
     <p>Your Tokens: <span id="token-count">100</span></p> 
     <div class="bet">
         <p>Bet:
             <input type="number" id="bet-amount" value="10" min="1">
-            <select id="bet-type">
-              <option value="big">Big</option>
-              <option value="small">Small</option>
-              <option value="triple">Triple</option>
-            </select>
-            <button onclick="rollDice()">Roll Dice</button>
-          </p>
+        </p>  
+        <div class="betType"> 
+            <button onclick="rollDice('big')">Big</button>
+            <button onclick="rollDice('small')">Small</button>
+            <button onclick="rollDice('triple')">Triple</button>
+        </div>
     </div>
     
-    <p id="result"></p>
+    <!-- <p id="result"></p> -->
     
     <script src="js/index.js"></script>
 </body>

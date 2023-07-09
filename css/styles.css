@@ -37,19 +37,24 @@ body{
     width: 20%;
 }
 
-button{
-    display: block;
-    margin: 10px auto;
+input{
+    width: 5%;
 }
+
 p{
     text-align: center;
     color: #F2E3DB;
 }
-.bet{
-    display: flex;
+
+.betType{
     margin: 0 auto;
-    justify-content: space-evenly;
-    width: 50%;
+    text-align: center;
+}
+.betType button{
+    margin: 5px;
+    width: 8rem;
+    padding: 10px;
+    border-radius: 10px;
 }
 @media screen and (max-width: 767px){
     #title{
@@ -61,5 +66,8 @@ p{
     .dice{
         width: 30%;
         padding: 0 5px;
+    }
+    input{
+        width: 10%;
     }
 }
