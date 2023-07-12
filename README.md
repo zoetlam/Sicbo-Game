@@ -6,6 +6,7 @@ The Sic Bo Game is a web-based application that simulates the popular dice game 
 The code for the Sic Bo Game consists of an HTML file that includes CSS styles and JavaScript code. The HTML structure defines the layout and user interface of the game, the CSS styles handle the appearance and responsive design, and the JavaScript code provides the game logic and functionality.
 
 **JavaScript Functionality**
+
 The JavaScript code provides the game logic and functionality of the Sic Bo Game. It includes the following key functions and actions:
 
 `rollDice(betType)`: Handles the dice rolling functionality based on the selected bet type.
