@@ -3,6 +3,8 @@ The Sic Bo Game is a web-based application that simulates the popular dice game 
 
 The objective of the Sic Bo game is to predict the outcome of the dice roll accurately and win tokens.
 
+## Live Demo [here](https://zoetlam.github.io/Sicbo-Game/)
+
 **Betting Rule**
 
 Before rolling the dice, players must place their bets on the various available bet types.
